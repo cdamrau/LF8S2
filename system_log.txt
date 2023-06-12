@@ -1,0 +1,22 @@
+Date: 2023-06-12
+Timestamp: 12:42:22.206813
+CPU Usage: 0.7%
+RAM Usage: 8507.37MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Timestamp: 12:42:28.214330
+CPU Usage: 0.7%
+RAM Usage: 8494.14MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Timestamp: 12:42:34.220327
+CPU Usage: 0.0%
+RAM Usage: 8485.90MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Timestamp: 12:42:40.226862
+CPU Usage: 0.1%
+RAM Usage: 8501.28MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Timestamp: 12:42:46.233388

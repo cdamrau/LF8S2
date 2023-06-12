@@ -1,8 +1,11 @@
 import time
 import os
+import sys
 from datetime import datetime
 import pytest
-from ..main import monitor_system  # Import the monitor_system function from your main file
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from main import monitor_system
+
 
 @pytest.fixture
 def log_file():
