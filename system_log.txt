@@ -1,0 +1,67 @@
+Date: 2023-06-12
+Timestamp: 19:08:28.758121
+CPU Usage: 0.8%
+RAM Usage: 9141.30MB / 32683.21MB (28.0%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Date: 2023-06-12
+Timestamp: 19:11:37.552543
+CPU Usage: 0.8%
+RAM Usage: 9152.85MB / 32683.21MB (28.0%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:11:44.127146
+CPU Usage: 0.3%
+RAM Usage: 9142.88MB / 32683.21MB (28.0%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:11:50.133528
+CPU Usage: 0.4%
+RAM Usage: 9135.03MB / 32683.21MB (28.0%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:11:56.141161
+CPU Usage: 0.1%
+RAM Usage: 9153.59MB / 32683.21MB (28.0%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:02.147605
+CPU Usage: 0.3%
+RAM Usage: 9110.38MB / 32683.21MB (27.9%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:08.154514
+CPU Usage: 0.4%
+RAM Usage: 9106.33MB / 32683.21MB (27.9%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:14.161206
+CPU Usage: 0.3%
+RAM Usage: 9107.02MB / 32683.21MB (27.9%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:20.167856
+CPU Usage: 0.8%
+RAM Usage: 9106.18MB / 32683.21MB (27.9%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:26.174663
+CPU Usage: 0.9%
+RAM Usage: 9103.84MB / 32683.21MB (27.9%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:32.181541
+CPU Usage: 0.0%
+RAM Usage: 9109.91MB / 32683.21MB (27.9%)
+Disk Usage (C:\): 167.88GB / 172.09GB (97.6%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%

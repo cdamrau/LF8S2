@@ -1,3 +1,4 @@
+import os
 import psutil
 import time
 from datetime import datetime
@@ -56,7 +57,8 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
             print(cpu_message)
             send_notification("CPU Usage Limit Exceeded", cpu_message)
             email_notifications.send_email("CPU Usage Limit Exceeded", cpu_message)
-
+            with open(log_file, 'a') as file:
+                file.write(f"Limit Exceeded: {cpu_message}\n")
             break
 
         if ram_limit is not None and mem_percent > ram_limit:
@@ -64,6 +66,8 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
             print(ram_message)
             send_notification("RAM Usage Limit Exceeded", ram_message)
             email_notifications.send_email("RAM Usage Limit Exceeded", ram_message)
+            with open(log_file, 'a') as file:
+                file.write(f"Limit Exceeded: {ram_message}\n")
             break
 
         if disk_limit is not None:
@@ -75,6 +79,8 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
                     print(disk_message)
                     send_notification("Disk Usage Limit Exceeded", disk_message)
                     email_notifications.send_email("Disk Usage Limit Exceeded", disk_message)
+                    with open(log_file, 'a') as file:
+                        file.write(f"Limit Exceeded: {disk_message}\n")
                     break
 
         time.sleep(5)
