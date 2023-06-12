@@ -4,7 +4,7 @@ from datetime import datetime
 import pytest
 from unittest.mock import Mock
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-import main  # Add this import statement
+import main
 from main import monitor_system
 
 
