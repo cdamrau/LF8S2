@@ -7,7 +7,7 @@ def monitor_system(duration):
     first_run = True
     start_time = time.time()
 
-    while True:
+    while time.time() - start_time < duration:
         timestamp = datetime.now().strftime("%H:%M:%S.%f")
         if first_run:
             first_run = False
@@ -22,6 +22,7 @@ def monitor_system(duration):
             cpu_percent = psutil.cpu_percent(interval=1)
             cpu_log = f"CPU Usage: {cpu_percent}%"
             file.write(cpu_log + '\n')
+            print(f"{timestamp} - {cpu_log}")
 
             # RAM usage
             mem = psutil.virtual_memory()
@@ -30,6 +31,7 @@ def monitor_system(duration):
             mem_total = mem.total / 1024 / 1024  # in MB
             mem_log = f"RAM Usage: {mem_used:.2f}MB / {mem_total:.2f}MB ({mem_percent}%)"
             file.write(mem_log + '\n')
+            print(f"{timestamp} - {mem_log}")
 
             # Disk usage
             partitions = psutil.disk_partitions()
@@ -40,22 +42,9 @@ def monitor_system(duration):
                 disk_total = disk_usage.total / 1024 / 1024 / 1024  # in GB
                 disk_log = f"Disk Usage ({partition.mountpoint}): {disk_used:.2f}GB / {disk_total:.2f}GB ({disk_percent}%)"
                 file.write(disk_log + '\n')
-
-        print(f"Timestamp: {timestamp}")
-        print(cpu_log)
-        print(mem_log)
-        for partition in partitions:
-            disk_usage = psutil.disk_usage(partition.mountpoint)
-            disk_percent = disk_usage.percent
-            disk_used = disk_usage.used / 1024 / 1024 / 1024  # in GB
-            disk_total = disk_usage.total / 1024 / 1024 / 1024  # in GB
-            disk_log = f"Disk Usage ({partition.mountpoint}): {disk_used:.2f}GB / {disk_total:.2f}GB ({disk_percent}%)"
-            print(disk_log)
-        print('\n')
-
-        if time.time() - start_time >= duration:
-            break
+                print(f"{timestamp} - {disk_log}")
 
         time.sleep(5)
 
+# Call the monitor_system() function with the specified duration
 monitor_system(60)

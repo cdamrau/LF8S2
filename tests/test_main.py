@@ -1,4 +1,3 @@
-import time
 import os
 import sys
 from datetime import datetime
@@ -21,15 +20,13 @@ def log_file():
     if os.path.exists(file_name):
         os.remove(file_name)
 
+
 def test_system_monitor(log_file):
-    # Run the system monitor for a duration of 10 seconds
-    duration = 10
+    # Run the system monitor for a duration of 15 seconds
+    duration = 15
 
     # Start the system monitor
-    monitor_system()
-
-    # Wait for the specified duration
-    time.sleep(duration)
+    monitor_system(duration)
 
     # Check if the log file is created
     assert os.path.exists(log_file)

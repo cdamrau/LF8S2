@@ -1,22 +1,48 @@
 Date: 2023-06-12
-Timestamp: 12:42:22.206813
-CPU Usage: 0.7%
-RAM Usage: 8507.37MB / 32683.21MB (26.0%)
-Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
+Timestamp: 13:27:02.713004
+CPU Usage: 0.8%
+RAM Usage: 8536.97MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
 Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
-Timestamp: 12:42:28.214330
-CPU Usage: 0.7%
-RAM Usage: 8494.14MB / 32683.21MB (26.0%)
-Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
-Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
-Timestamp: 12:42:34.220327
+Timestamp: 13:27:08.718813
 CPU Usage: 0.0%
-RAM Usage: 8485.90MB / 32683.21MB (26.0%)
-Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
+RAM Usage: 8540.11MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
 Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
-Timestamp: 12:42:40.226862
+Timestamp: 13:27:14.723821
+CPU Usage: 0.0%
+RAM Usage: 8535.75MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Date: 2023-06-12
+Timestamp: 13:28:48.981393
+CPU Usage: 0.3%
+RAM Usage: 8554.68MB / 32683.21MB (26.2%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Timestamp: 13:28:54.988615
+CPU Usage: 0.0%
+RAM Usage: 8537.51MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Timestamp: 13:29:00.994827
+CPU Usage: 1.4%
+RAM Usage: 8533.21MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Date: 2023-06-12
+Timestamp: 13:30:11.120760
+CPU Usage: 0.4%
+RAM Usage: 8579.40MB / 32683.21MB (26.3%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
+Timestamp: 13:30:17.127319
 CPU Usage: 0.1%
-RAM Usage: 8501.28MB / 32683.21MB (26.0%)
-Disk Usage (C:\): 167.32GB / 172.09GB (97.2%)
+RAM Usage: 8563.18MB / 32683.21MB (26.2%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
 Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
-Timestamp: 12:42:46.233388
+Timestamp: 13:30:23.133514
+CPU Usage: 0.5%
+RAM Usage: 8554.26MB / 32683.21MB (26.2%)
+Disk Usage (C:\): 167.33GB / 172.09GB (97.2%)
+Disk Usage (E:\): 1798.29GB / 5589.01GB (32.2%)
