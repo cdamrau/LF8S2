@@ -2,7 +2,7 @@ import psutil
 import time
 
 def monitor_system():
-    disk_paths = ['C:\\', 'E:\\']  # Example disk paths to monitor on Windows
+    disk_paths = ['C:\\', 'D:\\', 'E:\\']  # Example disk paths to monitor on Windows
 
     while True:
         # CPU usage
