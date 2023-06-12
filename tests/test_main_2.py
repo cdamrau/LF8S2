@@ -2,7 +2,7 @@ import time
 import os
 from datetime import datetime
 import pytest
-from main.py import monitor_system  # Import the monitor_system function from your main file
+from ..main import monitor_system  # Import the monitor_system function from your main file
 
 @pytest.fixture
 def log_file():
