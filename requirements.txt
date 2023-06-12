@@ -1,2 +1,4 @@
 psutil
 unitest
+greenlet
+gevent
