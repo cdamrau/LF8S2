@@ -1,8 +1,14 @@
 import psutil
 import time
 from datetime import datetime
+from notifications import send_notification
+import email_notifications
 
-def monitor_system(duration):
+# Load environment variables from .env file
+import dotenv
+dotenv.load_dotenv()
+
+def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
     log_file = 'system_log.txt'  # Name of the log file
     first_run = True
     start_time = time.time()
@@ -44,7 +50,34 @@ def monitor_system(duration):
                 file.write(disk_log + '\n')
                 print(f"{timestamp} - {disk_log}")
 
+        # Check limits
+        if cpu_limit is not None and cpu_percent > cpu_limit:
+            cpu_message = f"CPU usage exceeded the limit of {cpu_limit}%"
+            print(cpu_message)
+            send_notification("CPU Usage Limit Exceeded", cpu_message)
+            email_notifications.send_email("CPU Usage Limit Exceeded", cpu_message)
+
+            break
+
+        if ram_limit is not None and mem_percent > ram_limit:
+            ram_message = f"RAM usage exceeded the limit of {ram_limit}%"
+            print(ram_message)
+            send_notification("RAM Usage Limit Exceeded", ram_message)
+            email_notifications.send_email("RAM Usage Limit Exceeded", ram_message)
+            break
+
+        if disk_limit is not None:
+            for partition in partitions:
+                disk_usage = psutil.disk_usage(partition.mountpoint)
+                disk_percent = disk_usage.percent
+                if disk_percent > disk_limit:
+                    disk_message = f"Disk usage on {partition.mountpoint} exceeded the limit of {disk_limit}%"
+                    print(disk_message)
+                    send_notification("Disk Usage Limit Exceeded", disk_message)
+                    email_notifications.send_email("Disk Usage Limit Exceeded", disk_message)
+                    break
+
         time.sleep(5)
 
-# Call the monitor_system() function with the specified duration
-monitor_system(60)
+# Call the monitor_system() function with the specified duration and limits
+monitor_system(duration=60, cpu_limit=80, ram_limit=70, disk_limit=90)
