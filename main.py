@@ -8,14 +8,15 @@ import email_notifications
 import dotenv
 dotenv.load_dotenv()
 
+def get_logged_in_users():
+    users = psutil.users()
+    logged_in_users = [user.name for user in users]
+    return logged_in_users
+
 def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
     log_file = 'system_log.txt'  # Name of the log file
     first_run = True
     start_time = time.time()
-
-    # Get initial logged in users
-    initial_users = psutil.users()
-    logged_in_users = [user.name for user in initial_users]
 
     while time.time() - start_time < duration:
         timestamp = datetime.now().strftime("%H:%M:%S.%f")
@@ -25,32 +26,14 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
             with open(log_file, 'a') as file:
                 file.write(f"Date: {datestamp}\n")
 
-                  # Get initial logged in users
-                initial_users = psutil.users()
-                logged_in_users = [user.name for user in initial_users]
-                users_log = f"Logged-in Users: {', '.join(logged_in_users)}"
-                file.write(users_log + '\n')
-
         with open(log_file, 'a') as file:
             file.write(f"Timestamp: {timestamp}\n")
 
-            # Log in and log out events
-            current_users = psutil.users()
-            current_usernames = [user.name for user in current_users]
-
-            for user in current_users:
-                if user.name not in logged_in_users:
-                    log_in_event = f"User {user.name} logged in at {timestamp}"
-                    file.write(log_in_event + '\n')
-                    print(log_in_event)
-
-            for username in logged_in_users:
-                if username not in current_usernames:
-                    log_out_event = f"User {username} logged out at {timestamp}"
-                    file.write(log_out_event + '\n')
-                    print(log_out_event)
-
-            logged_in_users = current_usernames
+            # Logged-in users
+            logged_in_users = get_logged_in_users()
+            users_log = f"Logged-in Users: {', '.join(logged_in_users)}"
+            file.write(users_log + '\n')
+            print(f"{timestamp} - {users_log}")
 
             # CPU usage
             cpu_percent = psutil.cpu_percent(interval=1)

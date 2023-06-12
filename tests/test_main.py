@@ -2,11 +2,10 @@ import os
 import sys
 from datetime import datetime
 import pytest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import main
 from main import monitor_system
-
 
 @pytest.fixture
 def log_file():
@@ -22,10 +21,13 @@ def log_file():
     if os.path.exists(file_name):
         os.remove(file_name)
 
-
 def test_system_monitor(log_file, mocker):
     # Mock the send_email function
     mocker.patch('main.email_notifications.send_email')
+
+    # Mock the get_logged_in_users function to return a predefined list of users
+    mocked_users = ['user1', 'user2', 'user3']
+    mocker.patch('main.get_logged_in_users', return_value=mocked_users)
 
     # Run the system monitor for a duration of 15 seconds
     duration = 15
@@ -51,6 +53,11 @@ def test_system_monitor(log_file, mocker):
 
     expected_timestamp = "Timestamp:"
     assert expected_timestamp in log_contents
+
+    expected_users = "Logged-in Users:"
+    assert expected_users in log_contents
+    for user in mocked_users:
+        assert user in log_contents
 
     expected_cpu_usage = "CPU Usage:"
     assert expected_cpu_usage in log_contents
