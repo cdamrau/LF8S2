@@ -1,4 +1,4 @@
 psutil
 unitest
 sendgrid
-plyer
+py-notifier

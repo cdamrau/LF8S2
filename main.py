@@ -2,13 +2,12 @@ import os
 import psutil
 import time
 from datetime import datetime
-from notifications import send_notification
 import email_notifications
 
 # Load environment variables from .env file
 import dotenv
 dotenv.load_dotenv()
-#tes
+
 def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
     log_file = 'system_log.txt'  # Name of the log file
     first_run = True
@@ -55,7 +54,6 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
         if cpu_limit is not None and cpu_percent > cpu_limit:
             cpu_message = f"CPU usage exceeded the limit of {cpu_limit}%"
             print(cpu_message)
-            send_notification("CPU Usage Limit Exceeded", cpu_message)
             email_notifications.send_email("CPU Usage Limit Exceeded", cpu_message)
             with open(log_file, 'a') as file:
                 file.write(f"Limit Exceeded: {cpu_message}\n")
@@ -64,7 +62,6 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
         if ram_limit is not None and mem_percent > ram_limit:
             ram_message = f"RAM usage exceeded the limit of {ram_limit}%"
             print(ram_message)
-            send_notification("RAM Usage Limit Exceeded", ram_message)
             email_notifications.send_email("RAM Usage Limit Exceeded", ram_message)
             with open(log_file, 'a') as file:
                 file.write(f"Limit Exceeded: {ram_message}\n")
@@ -77,7 +74,6 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
                 if disk_percent > disk_limit:
                     disk_message = f"Disk usage on {partition.mountpoint} exceeded the limit of {disk_limit}%"
                     print(disk_message)
-                    send_notification("Disk Usage Limit Exceeded", disk_message)
                     email_notifications.send_email("Disk Usage Limit Exceeded", disk_message)
                     with open(log_file, 'a') as file:
                         file.write(f"Limit Exceeded: {disk_message}\n")

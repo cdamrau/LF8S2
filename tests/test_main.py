@@ -24,8 +24,8 @@ def log_file():
 
 
 def test_system_monitor(log_file, mocker):
-    # Mock the send_notification function
-    mocker.patch('main.send_notification')
+    # Mock the send_email function
+    mocker.patch('main.email_notifications.send_email')
 
     # Run the system monitor for a duration of 15 seconds
     duration = 15
@@ -61,7 +61,7 @@ def test_system_monitor(log_file, mocker):
     expected_disk_usage = "Disk Usage"
     assert expected_disk_usage in log_contents
 
-    # Check if the send_notification function was called
-    main.send_notification.assert_called()
+    # Check if the send_email function was called
+    main.email_notifications.send_email.assert_called()
 
     # Additional assertions based on your specific log format and requirements
