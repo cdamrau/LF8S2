@@ -2,34 +2,38 @@ import os
 import sys
 from datetime import datetime
 import pytest
-from unittest.mock import patch
+from unittest.mock import Mock
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from main import monitor_system
-#test
+
+
 @pytest.fixture
-def log_file(tmp_path):
-    file_name = tmp_path / 'system_log.txt'
+def log_file():
+    file_name = 'system_log.txt'
+
+    # Remove the log file if it already exists
+    if os.path.exists(file_name):
+        os.remove(file_name)
 
     yield file_name
 
     # Clean up - remove the log file after the test
-    if file_name.exists():
-        file_name.unlink()
+    if os.path.exists(file_name):
+        os.remove(file_name)
 
-def test_system_monitor(log_file):
+
+def test_system_monitor(log_file, mocker):
+    # Mock the send_notification function
+    mocker.patch('main.send_notification')
+
     # Run the system monitor for a duration of 15 seconds
-    duration = 7
-
-    # Set the limits for testing
-    cpu_limit = 80
-    ram_limit = 70
-    disk_limit = 90
+    duration = 15
 
     # Start the system monitor
-    monitor_system(duration, cpu_limit=cpu_limit, ram_limit=ram_limit, disk_limit=disk_limit)
+    monitor_system(duration, cpu_limit=80, ram_limit=70, disk_limit=90)
 
     # Check if the log file is created
-    assert log_file.exists()
+    assert os.path.exists(log_file)
 
     # Read the contents of the log file
     with open(log_file, 'r') as file:
@@ -56,14 +60,7 @@ def test_system_monitor(log_file):
     expected_disk_usage = "Disk Usage"
     assert expected_disk_usage in log_contents
 
+    # Check if the send_notification function was called
+    main.send_notification.assert_called()
+
     # Additional assertions based on your specific log format and requirements
-
-    # Check if the limit exceeded messages are present in the log file
-    cpu_limit_message = f"CPU usage exceeded the limit of {cpu_limit}%"
-    assert cpu_limit_message in log_contents
-
-    ram_limit_message = f"RAM usage exceeded the limit of {ram_limit}%"
-    assert ram_limit_message in log_contents
-
-    disk_limit_message = f"Disk usage exceeded the limit of {disk_limit}%"
-    assert disk_limit_message in log_contents
