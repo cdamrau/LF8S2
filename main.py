@@ -2,9 +2,10 @@ import psutil
 import time
 from datetime import datetime
 
-def monitor_system():
+def monitor_system(duration):
     log_file = 'system_log.txt'  # Name of the log file
     first_run = True
+    start_time = time.time()
 
     while True:
         timestamp = datetime.now().strftime("%H:%M:%S.%f")
@@ -39,7 +40,6 @@ def monitor_system():
                 disk_total = disk_usage.total / 1024 / 1024 / 1024  # in GB
                 disk_log = f"Disk Usage ({partition.mountpoint}): {disk_used:.2f}GB / {disk_total:.2f}GB ({disk_percent}%)"
                 file.write(disk_log + '\n')
-                #print(disk_log)
 
         print(f"Timestamp: {timestamp}")
         print(cpu_log)
@@ -53,6 +53,9 @@ def monitor_system():
             print(disk_log)
         print('\n')
 
+        if time.time() - start_time >= duration:
+            break
+
         time.sleep(5)
 
-monitor_system()
+monitor_system(60)
