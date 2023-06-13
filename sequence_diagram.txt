@@ -1,0 +1,105 @@
+      +-------------------------+
+                                                  |       User Console       |
+                                                  +-------------------------+
+                                                            |
+                                                            | 1. Enter monitoring settings
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |        main.py          |
+                                                  +-------------------------+
+                                                            |
+                                                            | 2. Start system monitoring
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |         psutil           |
+                                                  +-------------------------+
+                                                            |
+                                                            | 3. Retrieve CPU usage
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |       main.py            |
+                                                  +-------------------------+
+                                                            |
+                                                            | 4. Check CPU usage against limit
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |    email_notifications  |
+                                                  +-------------------------+
+                                                            |
+                                                            | 5. Send email notification (if limit exceeded)
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |       main.py            |
+                                                  +-------------------------+
+                                                            |
+                                                            | 6. Continue monitoring
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |         psutil           |
+                                                  +-------------------------+
+                                                            |
+                                                            | 7. Retrieve RAM usage
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |       main.py            |
+                                                  +-------------------------+
+                                                            |
+                                                            | 8. Check RAM usage against limit
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |    email_notifications  |
+                                                  +-------------------------+
+                                                            |
+                                                            | 9. Send email notification (if limit exceeded)
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |       main.py            |
+                                                  +-------------------------+
+                                                            |
+                                                            | 10. Continue monitoring
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |         psutil           |
+                                                  +-------------------------+
+                                                            |
+                                                            | 11. Retrieve disk usage
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |       main.py            |
+                                                  +-------------------------+
+                                                            |
+                                                            | 12. Check disk usage against limit
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |    email_notifications  |
+                                                  +-------------------------+
+                                                            |
+                                                            | 13. Send email notification (if limit exceeded)
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |       main.py            |
+                                                  +-------------------------+
+                                                            |
+                                                            | 14. Continue monitoring
+                                                            |
+                                                            V
+                                                  +-------------------------+
+                                                  |         psutil           |
+                                                  +-------------------------+
+                                                            |
+                                                            | 15. Repeat steps 3-14
+                                                            |
+                                                            V

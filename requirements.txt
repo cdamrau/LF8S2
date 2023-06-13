@@ -1,2 +1,5 @@
 psutil
 unitest
+sendgrid
+py-notifier
+pytest-mock
