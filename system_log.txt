@@ -1,0 +1,50 @@
+Date: 2023-06-13
+Timestamp: 19:11:41.761206
+Logged-in Users: Dev
+CPU Usage: 0.5%
+RAM Usage: 8519.45MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 168.97GB / 172.09GB (98.2%)
+Disk Usage (E:\): 1798.33GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:11:47.771935
+Logged-in Users: Dev
+CPU Usage: 0.4%
+RAM Usage: 8525.59MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 168.97GB / 172.09GB (98.2%)
+Disk Usage (E:\): 1798.33GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:11:53.780527
+Logged-in Users: Dev
+CPU Usage: 0.1%
+RAM Usage: 8524.52MB / 32683.21MB (26.1%)
+Disk Usage (C:\): 168.97GB / 172.09GB (98.2%)
+Disk Usage (E:\): 1798.33GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:11:59.788920
+Logged-in Users: Dev
+CPU Usage: 0.3%
+RAM Usage: 8505.14MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 168.97GB / 172.09GB (98.2%)
+Disk Usage (E:\): 1798.33GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:05.798054
+Logged-in Users: Dev
+CPU Usage: 0.3%
+RAM Usage: 8502.68MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 168.97GB / 172.09GB (98.2%)
+Disk Usage (E:\): 1798.33GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:11.806974
+Logged-in Users: Dev
+CPU Usage: 0.0%
+RAM Usage: 8503.60MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 168.97GB / 172.09GB (98.2%)
+Disk Usage (E:\): 1798.33GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
+Timestamp: 19:12:17.815446
+Logged-in Users: Dev
+CPU Usage: 0.0%
+RAM Usage: 8507.24MB / 32683.21MB (26.0%)
+Disk Usage (C:\): 168.97GB / 172.09GB (98.2%)
+Disk Usage (E:\): 1798.33GB / 5589.01GB (32.2%)
+Limit Exceeded: Disk usage on C:\ exceeded the limit of 90%
