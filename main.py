@@ -86,7 +86,7 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
                 if disk_percent > disk_limit:
                     disk_message = f"Disk usage on {partition.mountpoint} exceeded the limit of {disk_limit}%"
                     print(disk_message)
-                    #email_notifications.send_email("Disk Usage Limit Exceeded", disk_message)
+                    email_notifications.send_email("Disk Usage Limit Exceeded", disk_message)
                     with open(log_file, 'a') as file:
                         file.write(f"Limit Exceeded: {disk_message}\n")
                     break
