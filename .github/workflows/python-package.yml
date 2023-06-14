@@ -3,6 +3,7 @@
 
 name: Python package
 
+# Der Workflow wird ausgelöst, wenn Änderungen in den 'main'-Zweig hochgeladen oder ein Pull Request in den 'main'-Zweig erstellt wird.
 on:
   push:
     branches: [ "main" ]
@@ -12,29 +13,42 @@ on:
 jobs:
   build:
 
+    # Der Workflow wird auf dem neuesten Ubuntu-Image ausgeführt.
     runs-on: ubuntu-latest
+
+    # Fail-Fast ist auf false gesetzt, was bedeutet, dass der Workflow trotz Fehlern in einer Matrixstrategie weiter ausgeführt wird.
     strategy:
       fail-fast: false
+
+      # Die Matrixstrategie ermöglicht es, den Workflow für verschiedene Python-Versionen auszuführen. Hier wird nur Python 3.10 verwendet.
       matrix:
         python-version: ["3.10"]
 
     steps:
     - uses: actions/checkout@v3
+
+    # Python wird mithilfe der 'actions/setup-python' Aktion installiert und konfiguriert.
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+
+    # Abhängigkeiten werden installiert, einschließlich 'flake8' und 'pytest'.
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         python -m pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    # Der Code wird mit 'flake8' gelintet, um Python-Syntaxfehler und undefinierte Namen zu finden.
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
+        # Der Build wird gestoppt, wenn Python-Syntaxfehler oder undefinierte Namen gefunden werden.
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        # exit-zero behandelt alle Fehler als Warnungen. Der GitHub-Editor hat eine Breite von 127 Zeichen.
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    # Der Code wird mit 'pytest' getestet.
     - name: Test with pytest
       run: |
         pytest
