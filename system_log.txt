@@ -1,0 +1,7 @@
+Date: 2023-06-15
+Timestamp: 09:48:19.379599
+Logged-in Users: c.damrauadm
+CPU Usage: 2.9%
+RAM Usage: 11969.96MB / 32439.05MB (36.9%)
+Disk Usage (C:\): 99.79GB / 953.23GB (10.5%)
+Limit Exceeded: RAM usage exceeded the limit of 10%
