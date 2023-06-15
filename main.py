@@ -3,7 +3,7 @@ import psutil
 import time
 from datetime import datetime
 import email_notifications
-
+#test-commit
 # Load environment variables from .env file
 import dotenv
 dotenv.load_dotenv()
@@ -100,4 +100,4 @@ def monitor_system(duration, cpu_limit=None, ram_limit=None, disk_limit=None):
         time.sleep(5)
 
 # Rufe die Funktion 'monitor_system()' auf und übergebe die zu überwachenden Parameter. Die Überwachungsdauer beträgt 60 Sekunden, der CPU-Auslastungs-Grenzwert beträgt 80%, der RAM-Nutzungs-Grenzwert beträgt 70% und der Festplatten-Nutzungs-Grenzwert beträgt 90%. 
-monitor_system(duration=60, cpu_limit=80, ram_limit=70, disk_limit=90)
+monitor_system(duration=60, cpu_limit=80, ram_limit=10, disk_limit=90)
